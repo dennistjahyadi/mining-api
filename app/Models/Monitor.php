@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Monitor extends Model
 {
     use HasFactory;
-    protected $fillable = ['name','data'];
+    protected $fillable = ['name','data','random'];
 }

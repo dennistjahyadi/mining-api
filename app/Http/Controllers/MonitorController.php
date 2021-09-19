@@ -10,17 +10,20 @@ class MonitorController extends Controller
     //
 
     public function save(Request $request){
+        $strRand = rand(1,100000);
         $monitor = Monitor::updateOrCreate(
             ['name' => $request->name],
-            ['data' => $request->data]
+            ['data' => $request->data, 
+              'random' => $strRand
+            ]
         );
+    
         return 1;
     }
 
     public function index(Request $request){
-        $monitor = Monitor::all();
+        $monitors = Monitor::all();
 
-        
-        return view('main',compact('monitor'));
+        return view('main',compact('monitors'));
     }
 }

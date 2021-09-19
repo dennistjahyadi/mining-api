@@ -12,6 +12,5 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::post('/monitor', 'App\Http\Controllers\MonitorController@save');
 Route::get('/monitor', 'App\Http\Controllers\MonitorController@index')->name('home');
 

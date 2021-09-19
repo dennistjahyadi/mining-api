@@ -17,6 +17,7 @@ class CreateMonitorsTable extends Migration
             $table->id();
             $table->string('name');
             $table->text('data');
+            $table->string('random');
             $table->timestamps();
         });
     }
