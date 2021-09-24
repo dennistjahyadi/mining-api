@@ -37,6 +37,8 @@
         $diffInSeconds =  $monitor->updated_at->diffInSeconds(Carbon\Carbon::now());
         $status = $diffInSeconds<20? 'on': 'off'
     @endphp
+    <b>{{$monitor->updated_at}}</b>
+    <br/><br/>
     <table>
     <tr style="background: {{ $status=="off" ? 'red': 'green'}}" colspan="2">
       <th>{{$monitor["name"]}}</th>
